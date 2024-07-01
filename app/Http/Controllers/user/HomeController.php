@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    //userPage
-    public function userPage() {
-
+    // porfilePage
+    public function porfilePage()
+    {
+        return view('user.profile.profile');
     }
 }
