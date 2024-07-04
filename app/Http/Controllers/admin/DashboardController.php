@@ -9,6 +9,8 @@ class DashboardController extends Controller
 {
     //adminHomePage
     public function adminHomePage() {
-        return view('admin.layouts');
+        return view('admin.navaber');
     }
+
+
 }

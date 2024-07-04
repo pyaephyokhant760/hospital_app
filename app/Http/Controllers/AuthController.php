@@ -11,6 +11,8 @@ class AuthController extends Controller
     public function auth() {
         if (Auth::user()->role == 'user') {
            return redirect()->route('porfilePage');
+        }else {
+            return redirect()->route('adminHomePage');
         }
     }
 

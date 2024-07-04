@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AddDoctorController;
 use App\Http\Controllers\user\HomeController;
 use App\Http\Controllers\admin\DashboardController;
 
@@ -16,4 +17,6 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
 
     // admin
     Route::get('home',[DashboardController::class,'adminHomePage'])->name('adminHomePage');
+    Route::get('addDoctor',[AddDoctorController::class,'addDoctorPage'])->name('addDoctorPage');
+    Route::post('getAddDoctor',[AddDoctorController::class,'getAddDoctorPage'])->name('getAddDoctorPage');
 });
