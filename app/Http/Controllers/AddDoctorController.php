@@ -18,7 +18,8 @@ class AddDoctorController extends Controller
         $this->photoValida($request);
         $data = $this->data($request);
         AddDoctor::create($data);
-        return back();
+        return back()->with(["data" => "Create Success"]);
+
     }
 
 
@@ -29,7 +30,7 @@ class AddDoctorController extends Controller
             'phone' => 'required',
             'speciality' => 'required',
             'room_number' => 'required',
-            // 'image' => 'mimes:jpg,bmp,png',
+            'image' => 'mimes:jpg,bmp,png'
         ])->validate();
     }
 
